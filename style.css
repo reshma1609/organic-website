@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: #77c77f;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #444;
+}
+
+.banner {
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner .content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner h1 {
+  font-size: 3em;
+  color: #77c77f;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #77c77f;
+}
+
+.features, .products, .reviews {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature, .product, .review {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.feature i {
+  font-size: 2em;
+  color: #77c77f;
+  margin-bottom: 10px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #77c77f;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.categories {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.categories li {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}

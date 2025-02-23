@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Organic Veggies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+       
+    <div class="navbar">
+        <form id="login-form" action="login.php" method="POST">
+            <!-- Form content -->
+        </form>
+        
+            <img src="veg/mainlogo.png" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+    </div>
+
+<section class="products">
+    <h2>Our Products</h2>
+    <div class="product-list">
+        <div class="product">
+            <img src="veg/tomato.jpeg" alt="Tomato">
+            <h3>Fresh Tomatoes</h3>
+            <p>Rs.50 per kg</p>
+            <button class="add-to-cart" data-product="Tomato" data-price="50">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/onion.jpg" alt="onion">
+            <h3>Organic onion</h3>
+            <p>Rs.45 per kg</p>
+            <button class="add-to-cart" data-product="onion" data-price="45">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/spring onion.jpeg" alt="spring onion">
+            <h3>Fresh spring onion</h3>
+            <p>Rs.10 per kg</p>
+            <button class="add-to-cart" data-product="spring onion" data-price="10">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/potato.webp" alt="potato">
+            <h3>Fresh potato</h3>
+            <p>Rs.30 per kg</p>
+            <button class="add-to-cart" data-product="Potato" data-price="30">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/kira.jpeg" alt="kira">
+            <h3>Fresh kira</h3>
+            <p>Rs.45 per kg</p>
+            <button class="add-to-cart" data-product="Kira" data-price="45">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/chilli.webp" alt="Chilli">
+            <h3>spicy chilli</h3>
+            <p>Rs.10 per kg</p>
+            <button class="add-to-cart" data-product="Chilli" data-price="10">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/brinjal.jpeg" alt="brinjal">
+            <h3>Fresh Brinjal</h3>
+            <p>Rs.30 per kg</p>
+            <button class="add-to-cart" data-product="Brinjal" data-price="30">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/beans.jpeg" alt="beans">
+            <h3>Fresh Beans</h3>
+            <p>Rs.50 per kilo</p>
+            <button class="add-to-cart" data-product="Beans" data-price="50">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/beatroot.jpeg" alt="beatroot">
+            <h3>Fresh Beatroot</h3>
+            <p>Rs.50 per kilo</p>
+            <button class="add-to-cart" data-product="Beatroot" data-price="50">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/bitter gourd.jpeg" alt="bitter gourd">
+            <h3>Organic Bitter gourd</h3>
+            <p>Rs.45 per kilo</p>
+            <button class="add-to-cart" data-product="Bitter gourd" data-price="45">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/curry-Leaves-.jpg" alt="curry leaves">
+            <h3>Fresh curry leaves</h3>
+            <p>Rs.20 per kg</p>
+            <button class="add-to-cart" data-product="curry leaves" data-price="20">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/ladies finger.jpeg" alt="ladies finger">
+            <h3>Organic Ladies finger</h3>
+            <p>Rs.45 per kilo</p>
+            <button class="add-to-cart" data-product="Ladies finger" data-price="45">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/capsicum.webp" alt="capsicum">
+            <h3>spicy Capsicum</h3>
+            <p>Rs.50 per kg</p>
+            <button class="add-to-cart" data-product="capsicum" data-price="10">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/cabbage.webp" alt="cabbage">
+            <h3>Cabbage</h3>
+            <p>Rs.60 per 1</p>
+            <button class="add-to-cart" data-product="cabbage" data-price="10">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="veg/calliflower.jpeg" alt="Calliflower">
+            <h3>organic Calliflower</h3>
+            <p>Rs.50 per 1</p>
+            <button class="add-to-cart" data-product="calliflower" data-price="10">Add to Cart</button>
+        </div>
+
+
+
+        <!-- Add more products as needed -->
+    </div>
+</section>
+
+
+
+ <!-- Script for Cart and Login Management -->
+ <script>
+    // Function to handle "Add to Cart" button clicks
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const productName = this.getAttribute('data-product');
+            const productPrice = this.getAttribute('data-price');
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProduct = cart.find(product => product.name === productName);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} has been added to your cart.`);
+        });
+    });
+</script>
+
+</body>
+</html>
